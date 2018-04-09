@@ -20,9 +20,16 @@ namespace Wpf_Note
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		
 		public MainWindow()
 		{
 			InitializeComponent();
+		
+		}
+
+		private void Button_01_Click(object sender, RoutedEventArgs e)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

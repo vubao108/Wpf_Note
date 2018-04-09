@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Note"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Save the humams" Height="700" Width="1000">
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="160"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition/>
+            <RowDefinition Height="150"/>
+
+        </Grid.RowDefinitions>
+        <Button x:Name="startButton" Content="Start!" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="75"/>
+        <ProgressBar Grid.Column="1" Grid.Row="1" Height="20"/>
+        <StackPanel Grid.Column="2" Orientation="Vertical" Grid.Row="1">
+            <TextBlock TextWrapping="Wrap" Text="Avoid these" RenderTransformOrigin="0.122,-0.562" FontSize="18"/>
+            <ContentControl Content="ContentControl" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
+        <Canvas x:Name="playArea" Grid.ColumnSpan="3">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF37C6D4"/>
+                    <GradientStop Color="#FF0BE23C" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+
     </Grid>
 </Window>
